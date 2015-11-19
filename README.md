@@ -14,6 +14,7 @@ Bad bots are defined as:
 - Government surveillance bots
 - Russian search engine Yandex
 - Chinese search engine Baidu
+- Spamhaus IP list block
 
 Yandex/Baidu
 ------------
@@ -30,6 +31,14 @@ useragent. Their useragents may look harmless, perfectly legitimate even.
 For example, "^Java" but according to
 [Project Honeypot](https://www.projecthoneypot.org/harvester_useragents.php),
 it's actually one of the most dangerous.
+
+
+Spamhaus IP Block
+----------------
+
+Block Spamhaus Lasso Drop Spam IP Address. (I'll keep this list updated)
+
+***GENERATED 19/11/2015***
 
 
 Setup
