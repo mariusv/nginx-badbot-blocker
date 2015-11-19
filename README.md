@@ -46,5 +46,5 @@ Setup
 
 If you have a bizarre or complicated setup, be sure to look everything
 over before using it. But for anyone with something that resembles
-a standard Nginx installation, this should work without any issues as long as you include in your nginx.conf the `blacklist.conf`.
+a standard Nginx installation, this should work without any issues as long as you include in your nginx.conf the `blacklist.conf` and `blockips.conf`.
 
