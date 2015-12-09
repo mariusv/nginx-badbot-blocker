@@ -12,14 +12,14 @@ Bad bots are defined as:
 - Aggressive bots that provide little value
 - Bots linked to viruses or malware
 - Government surveillance bots
-- Russian search engine Yandex
+- ~~~Russian search engine Yandex~~~ (Per users request Yandex was removed)
 - Chinese search engine Baidu
 - Spamhaus IP list block
 
-Yandex/Baidu
+Baidu
 ------------
 
-Unless your website is written in Russian or Chinese, you probably don't
+Unless your website is written in Chinese, you probably don't
 get any traffic from them. They mostly just waste bandwidth and consume resources.
 
 
