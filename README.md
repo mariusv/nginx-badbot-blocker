@@ -48,3 +48,12 @@ If you have a bizarre or complicated setup, be sure to look everything
 over before using it. But for anyone with something that resembles
 a standard Nginx installation, this should work without any issues as long as you include in your nginx.conf the `blacklist.conf` and `blockips.conf`.
 
+Copy both `blacklist.conf` and `blockips.conf` in your nginx directory (usually is in `/etc/nginx` but this can differ if nginx was compiled).
+Once you copied the files edit `nginx.conf` and under(usually at the end of the file) the `http` block add this lines:
+
+```bash
+## Include blacklist for bad bot and referrer blocking.
+include blacklist.conf;
+include blockips.conf;
+```
+
