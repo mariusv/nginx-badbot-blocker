@@ -7,7 +7,7 @@ Nginx Bad Bot Blocker
 ### Version 1 Created by: https://github.com/mariusv
 ### Version 2 Created by: https://github.com/mitchellkrogza/
 
-Over 4000 (and growing) Nginx rules to block bad bots.
+Over 4500 (and growing) Nginx rules to block bad bots.
 
 Bad bots are defined as:
 
@@ -40,25 +40,29 @@ If your Nginx is setup correctly you will see an include statement in your nginx
 `Include /etc/nginx/conf.d/*;`
 This automatically makes Nginx load anything in conf.d into memory available to all sites.
 
+**Make sure to get the RAW (unformatted) code by clicking the RAW button**
+
 ###2. Copy the blockbots.conf and ddos.conf files into /etc/nginx/bots.d
 
 `sudo mkdir /etc/nginx/bots.d `
 - copy the blockbots.conf file into that folder
 - copy the ddos.conf file into the same folder
 
-###3. Add the rate limiting zones for the DDOS filter
+**Make sure to get the RAW (unformatted) code by clicking the RAW button**
 
-- `sudo nano /etc/nginx/nginx.conf`
+###3. Add the following settings and rate limiting zones near the top of your nginx.conf file. This is both for the Anti DDOS rate limiting filter and for allowing Nginx to load this very large set of domain names into memory. 
 
-Add the following rate limiting zones
+- `server_names_hash_bucket_size 64;`
 
-- `limit_req_zone $ratelimited zone=flood:50m rate=90r/s;`
-- `limit_conn_zone $ratelimited zone=addr:50m;`
+- `server_names_hash_max_size 4096;`
 
-PLEASE NOTE: The above rate limiting rules are for the DDOS filter, it may seem like high values to you
-but for wordpress sites with plugins and lots of images, it's not. This will not limit any real visitor to
-your Wordpress sites but it will immediately rate limit any aggressive bot. Remember that other bots and user
-agents are rate limited using a different rate limiting rule at the bottom of the globalblacklist.conf file.
+- `limit_req_zone $binary_remote_addr zone=flood:50m rate=90r/s;`
+
+- `limit_conn_zone $binary_remote_addr zone=addr:50m;`
+
+The above rate limiting rules are for the DDOS filter, it may seem like high values to you but for wordpress sites with plugins and lots of images, it's not. This will not limit any real visitor to your Wordpress sites but it will immediately rate limit any aggressive bot. Remember that other bots and user agents are rate limited using a different rate limiting rule at the bottom of the globalblacklist.conf file.
+
+The server_names_hash settings allows Nginx Server to load this very large list of domain names and IP addresses into memory.
 
 ###4. Add the includes to a vhost to test (must be within a server {} block)
 
