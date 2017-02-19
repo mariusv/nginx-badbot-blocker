@@ -39,7 +39,7 @@ useragent. Their useragents may look harmless, perfectly legitimate even.
 
 ##1:
 
-**COPY THE GLOBALBLACKLIST.CONF FILE FROM THE REPO**
+**COPY THE BLACKLIST.CONF FILE FROM THE REPO**
 
 Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d folder. 
 
