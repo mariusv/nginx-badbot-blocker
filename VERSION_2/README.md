@@ -2,10 +2,12 @@
 Nginx Bad Bot Blocker
 =====================
 
-### Version 2.2017.01
+### Version 2.2017.02
 
 ### Version 1 Created by: https://github.com/mariusv
 ### Version 2 Created by: https://github.com/mitchellkrogza/
+
+#[CLICK HERE FOR DETAILED CONFIGURATION AND UPDATING INSTRUCTIONS](#configuration-of-the-nginx-badbot-blocker)
 
 Over 4500 (and growing) Nginx rules to block bad bots.
 
@@ -30,27 +32,71 @@ Bots Are Liars
 Bots try to make themselves look like other software by disguising their
 useragent. Their useragents may look harmless, perfectly legitimate even.
 
-#### For Nginx Web Server - https://www.nginx.com/
+#CONFIGURATION INSTRUCTIONS FOR THE NGINX BADBOT BLOCKER:
+### PLEASE READ CONFIGURATION INSTRUCTIONS BELOW THOROUGHLY
 
-## SETUP INSTRUCTIONS & CONFIGURATION OF THE NGINX BAD BOT BLOCKER:
+**New Super Easy Configuration Contributed by https://github.com/mitchellkrogza/**
 
-###1. Copy the /conf.d/blacklist.conf file to /etc/nginx/conf.d/blacklist.conf
+##1:
 
-If your Nginx is setup correctly you will see an include statement in your nginx.conf file as follows
-`Include /etc/nginx/conf.d/*;`
-This automatically makes Nginx load anything in conf.d into memory available to all sites.
+**COPY THE GLOBALBLACKLIST.CONF FILE FROM THE REPO**
 
-**Make sure to get the RAW (unformatted) code by clicking the RAW button**
+Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d folder. 
 
-###2. Copy the blockbots.conf and ddos.conf files into /etc/nginx/bots.d
+`cd /etc/nginx/conf.d`
+
+`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/conf.d/blacklist.conf`
+
+##2: 
+
+**COPY THE INCLUDE FILES FROM THE REPO**
+
+- From your command line in Linux type
 
 `sudo mkdir /etc/nginx/bots.d `
+
+`cd /etc/nginx/bots.d`
+
 - copy the blockbots.conf file into that folder
+
+`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/blockbots.conf`
+
+
 - copy the ddos.conf file into the same folder
 
-**Make sure to get the RAW (unformatted) code by clicking the RAW button**
+`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/ddos.conf`
 
-###3. Add the following settings and rate limiting zones near the top of your nginx.conf file. This is both for the Anti DDOS rate limiting filter and for allowing Nginx to load this very large set of domain names into memory. 
+##3:
+
+**WHITELIST ALL YOUR OWN DOMAIN NAMES AND IP ADDRESSES**
+
+Whitelist all your own domain names and IP addresses. **Please note important changes**, this is now done using include files so that you do not have to keep reinserting your whitelisted domains and IP addresses every time you update.
+
+`cd /etc/nginx/bots.d`
+
+- copy the whitelist-ips.conf file into that folder
+
+`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/whitelist-ips.conf`
+
+
+- copy the whitelist-domains.conf file into the same folder
+
+`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/whitelist-domains.conf`
+
+Use nano, vim or any other text editor to edit both whitelist-ips.conf and whitelist-domains.conf to include all your own domain names and IP addresses that you want to specifically whitelist from the blocker script. 
+
+When pulling any future updates now you can simply pull the latest globalblacklist.conf file and it will automatically include your whitelisted domains and IP addresses.
+
+
+##4:
+
+**INCLUDE IMPORTANT SETTINGS IN NGINX.CONF**
+
+- From your linux command line type
+
+- `sudo nano /etc/nginx/nginx.conf`
+
+#####Add the following settings and rate limiting zones near the top of your nginx.conf file. This is both for the Anti DDOS rate limiting filter and for allowing Nginx to load this very large set of domain names into memory. 
 
 - `server_names_hash_bucket_size 64;`
 
@@ -60,53 +106,102 @@ This automatically makes Nginx load anything in conf.d into memory available to 
 
 - `limit_conn_zone $binary_remote_addr zone=addr:50m;`
 
-The above rate limiting rules are for the DDOS filter, it may seem like high values to you but for wordpress sites with plugins and lots of images, it's not. This will not limit any real visitor to your Wordpress sites but it will immediately rate limit any aggressive bot. Remember that other bots and user agents are rate limited using a different rate limiting rule at the bottom of the globalblacklist.conf file.
+**Make sure** that your nginx.conf file contains the following include directive. If it's commented out make sure to uncomment it.
+
+- `include /etc/nginx/conf.d/*`
+
+**PLEASE NOTE:** The above rate limiting rules are for the DDOS filter, it may seem like high values to you but for wordpress sites with plugins and lots of images, it's not. This will not limit any real visitor to your Wordpress sites but it will immediately rate limit any aggressive bot. Remember that other bots and user agents are rate limited using a different rate limiting rule at the bottom of the globalblacklist.conf file.
 
 The server_names_hash settings allows Nginx Server to load this very large list of domain names and IP addresses into memory.
 
-###4. Add the includes to a vhost to test (must be within a server {} block)
+##5:
 
-Open a site config file for Nginx (just one for now) and add the following lines within your server {} block.
-##### MUST be added within a server {} block otherwise you will get EMERG errors from Nginx
+**ADD INCLUDE FILES INTO A VHOST**
+
+Open a site config file for Nginx (just one for now) and add the following lines.
+
+##### VERY IMPORTANT NOTE: 
+
+These includes MUST be added within a **server {}** block of a vhost otherwise you will get EMERG errors from Nginx.
 
 - `include /etc/nginx/bots.d/blockbots.conf;`
+
 - `include /etc/nginx/bots.d/ddos.conf;`
 
-###5. Whitelist your own IP adresses
+##6:
 
- Make sure to edit the blacklist.conf file near the bottom there is a section to whitelist your own
- IP addresses. Please add all your own IP addresses there before putting this into operation.
+**TESTING YOUR NGINX CONFIGURATION**
 
-###6. Test the config of Nginx before reloading to make sure you followed these instructions properly.
+`sudo nginx -t`
 
-sudo nginx -t (make sure it returns no errors and if none then)
-sudo service nginx reload
+If you get no errors then you followed my instructions so now you can make the blocker go live with a simple.
+
+`sudo service nginx reload`
+
+The blocker is now active and working so now you can run some simple tests from another linux machine to make sure it's working.
+
+##7:
+
+**TESTING**
+
+Run the following commands one by one from a terminal on another linux machine against your own domain name. 
+**substitute yourdomain.com in the examples below with your REAL domain name**
+
+`curl -A "googlebot" http://yourdomain.com`
+
+Should respond with 200 OK
+
+`curl -A "80legs" http://yourdomain.com`
+
+`curl -A "masscan" http://yourdomain.com`
+
+Should respond with: curl: (52) Empty reply from server
+
+`curl -I http://yourdomain.com -e http://100dollars-seo.com`
+
+`curl -I http://yourdomain.com -e http://zyzzcentral.ru`
+
+Should respond with: curl: (52) Empty reply from server
+
+The Nginx BadBot Blocker is now working and protecting your web sites !!!
+
+##8:
+
+**UPDATING THE NGINX BADBOT BLOCKER** is now easy thanks to the automatic includes for whitelisting your own domain names.
+
+Updating to the latest version is now as simple as:
+
+`cd /etc/nginx/conf.d`
+
+`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/conf.d/blacklist.conf`
+
+`sudo nginx -t`
+
+`sudo service nginx reload` 
+
+And you will be up to date with all your whitelisted domains included automatically for you now. 
+
+Relax now and sleep better at night knowing your site is telling all those baddies to go away !!!
 
 
-### Issues:
-Log any issues regarding incorrect listings on the issues system and they will be investigated
-and removed if necessary.
+### ISSUES:
+Log any issues regarding incorrect listings on the issues system and they will be investigated and removed if necessary.
 
-## WARNING:
-  Make sure to add all your own IP addresses the white list section near the bottom of the 
-  blacklist.conf file !!!!
+### PULL REQUESTS: 
+To contribute your own bad referers please add them into the https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/Pull_Requests/badreferers.list file and then send a Pull Request (PR).
 
 ## MONITOR WHAT YOU ARE DOING:
 
- MAKE SURE to monitor your web site logs after implementing this. We suggest you first
- load this into one site and monitor it for any possible false positives before putting
- this into production on all your web sites.
- 
- Also monitor your logs daily for new bad referers and user-agent strings that you
- want to block. Your best source of adding to this list is your own server logs, not mine.
- 
- Feel free to contribute bad referers from your own logs to this project by sending a PR.
- 
+**MAKE SURE to monitor your web site logs** after implementing this. I suggest you first load this into one site and monitor it for any possible false positives before putting this into production on all your web sites.
 
+Do not sit like an ostrich with your head in the sand, being a responsible server operator and web site owner means you must monitor your logs frequently. A reason many of you ended up here in the first place because you saw nasty looking stuff in your Nginx log files.
+ 
+Also monitor your logs daily for new bad referers and user-agent strings that you want to block. Your best source of adding to this list is your own server logs, not mine.
+ 
+Feel free to contribute bad referers from your own logs to this project by sending a Pull Request (PR). You can however rely on this list to keep out 99% of the baddies out there.
+ 
 ## Blocking Agressive Bots at Firewall Level Using Fail2Ban
 
-We have added a custom Fail2Ban filter and action written by mitchellkrogza which monitors your Nginx logs for bots that generate
-a large number of 444 errors. This custom jail for Fail2Ban will scan logs over a 1 week period and ban the offender for 24 hours.
-It helps a great deal in keeping out some repeat offenders and preventing them from filling up your log files with 444 errors.
-See the Fail2Ban folder for instructions on configuring this great add on for the Nginx Bot Blocker.
+We have added a custom Fail2Ban filter and action written by mitchellkrogza which monitors your Nginx logs for bots that generate a large number of 444 errors. This custom jail for Fail2Ban will scan logs over a 1 week period and ban the offender for 24 hours.
+It helps a great deal in keeping out some repeat offenders and preventing them from filling up your log files with 444 errors. See the Fail2Ban folder for instructions on configuring this great add on for the Nginx Bot Blocker.
 
