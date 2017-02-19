@@ -7,7 +7,7 @@ Nginx Bad Bot Blocker
 ### Version 1 Created by: https://github.com/mariusv
 ### Version 2 Created by: https://github.com/mitchellkrogza/
 
-#[CLICK HERE FOR DETAILED CONFIGURATION AND UPDATING INSTRUCTIONS](#configuration-of-the-nginx-badbot-blocker)
+#[CLICK HERE FOR DETAILED CONFIGURATION AND UPDATING INSTRUCTIONS](#configuration-instruction-for-the-nginx-badbot-blocker)
 
 Over 4500 (and growing) Nginx rules to block bad bots.
 
