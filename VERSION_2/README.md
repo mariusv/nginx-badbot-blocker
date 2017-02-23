@@ -190,7 +190,7 @@ Log any issues regarding incorrect listings on the issues system and they will b
 ### PULL REQUESTS: 
 To contribute your own bad referers please add them into the https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/Pull_Requests/badreferers.list file and then send a Pull Request (PR).
 
-### UNDERSTANDS PUNNYCODE / IDN DOMAIN NAMES
+### UNDERSTANDS PUNYCODE / IDN DOMAIN NAMES
 A lot of lists out there put funny domains into their hosts file. Your hosts file and DNS will not understand this. This list uses converted domains which are in the correct DNS format to be understood by any operating system. **Avoid using lists** that do not put the correctly formatted domain structure into their lists.
 
 For instance
