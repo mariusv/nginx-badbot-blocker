@@ -190,6 +190,40 @@ Log any issues regarding incorrect listings on the issues system and they will b
 ### PULL REQUESTS: 
 To contribute your own bad referers please add them into the https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/Pull_Requests/badreferers.list file and then send a Pull Request (PR).
 
+### UNDERSTANDS PUNNYCODE / IDN DOMAIN NAMES
+A lot of lists out there put funny domains into their hosts file. Your hosts file and DNS will not understand this. This list uses converted domains which are in the correct DNS format to be understood by any operating system. **Avoid using lists** that do not put the correctly formatted domain structure into their lists.
+
+For instance
+The domain:
+
+`lifehacĸer.com` (note the K)
+
+actually translates to:
+
+`xn--lifehacer-1rb.com`
+
+You can do an nslookup on any operating system and it will resolve correctly.
+
+`nslookup xn--lifehacer-1rb.com`
+
+```xn--lifehacer-1rb.com
+	origin = dns1.yandex.net
+	mail addr = iskalko.yandex.ru
+	serial = 2016120703
+	refresh = 14400
+	retry = 900
+	expire = 1209600
+	minimum = 14400
+xn--lifehacer-1rb.com	mail exchanger = 10 mx.yandex.net.
+Name:	xn--lifehacer-1rb.com
+Address: 78.110.60.230
+xn--lifehacer-1rb.com	nameserver = dns2.yandex.net.
+xn--lifehacer-1rb.com	text = "v=spf1 redirect=_spf.yandex.net"
+xn--lifehacer-1rb.com	nameserver = dns1.yandex.net.
+```
+
+- Look at: https://www.charset.org/punycode for more info on this.
+
 ## MONITOR WHAT YOU ARE DOING:
 
 **MAKE SURE to monitor your web site logs** after implementing this. I suggest you first load this into one site and monitor it for any possible false positives before putting this into production on all your web sites.
