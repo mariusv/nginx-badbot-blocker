@@ -9,7 +9,7 @@ Nginx Bad Bot Blocker
 
 #[* - Configuration and Updating Instructions](#configuration-instructions-for-the-nginx-badbot-blocker)
 
-Over 4500 (and growing) Nginx rules to block bad bots.
+Over 4000 (and growing) Nginx rules to block bad bots.
 
 Bad bots are defined as:
 
@@ -45,7 +45,7 @@ Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d fold
 
 `cd /etc/nginx/conf.d`
 
-`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/conf.d/blacklist.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf`
 
 ##2: 
 
@@ -59,12 +59,12 @@ Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d fold
 
 - copy the blockbots.conf file into that folder
 
-`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/blockbots.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/blockbots.conf`
 
 
 - copy the ddos.conf file into the same folder
 
-`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/ddos.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/ddos.conf`
 
 ##3:
 
@@ -76,12 +76,12 @@ Whitelist all your own domain names and IP addresses. **Please note important ch
 
 - copy the whitelist-ips.conf file into that folder
 
-`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/whitelist-ips.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/whitelist-domains.conf`
 
 
 - copy the whitelist-domains.conf file into the same folder
 
-`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/bots.d/whitelist-domains.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/whitelist-ips.conf`
 
 Use nano, vim or any other text editor to edit both whitelist-ips.conf and whitelist-domains.conf to include all your own domain names and IP addresses that you want to specifically whitelist from the blocker script. 
 
@@ -173,13 +173,21 @@ Updating to the latest version is now as simple as:
 
 `cd /etc/nginx/conf.d`
 
-`sudo wget https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/conf.d/blacklist.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/conf.d/blacklist.conf`
 
 `sudo nginx -t`
 
 `sudo service nginx reload` 
 
 And you will be up to date with all your whitelisted domains included automatically for you now. 
+
+# AUTO UPDATING:
+
+See the latest auto updater bash script at:
+
+https://raw.githubusercontent.com/mariusv/nginx-badbot-blocker/master/VERSION_2/updatenginxblocker.sh
+
+This can now be run as a daily cron to keep you up to date without having to remember to do it yourself. I have this cron running on 3 nginx servers for the past week pulling their updates automatically from my master, works flawlessly.
 
 Relax now and sleep better at night knowing your site is telling all those baddies to go away !!!
 
