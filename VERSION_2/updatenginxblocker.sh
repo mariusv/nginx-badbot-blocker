@@ -1,12 +1,9 @@
 #!/bin/bash
 # Bash Script for Auto Updating the Nginx Bad Bot Blocker
 # Copyright - https://github.com/mitchellkrogza
-# Project Url: https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker
+# Project Url: https://github.com/mariusv/nginx-badbot-blocker
 
 # MAKE SURE you have your whitelist-ips.conf and whitelist-domains.conf files in /etc/nginx/bots.d
-# A major change to using include files was introduced in
-# https://github.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/commit/c7acdfa8228d2f19a83e5bb14d54355db86fcebf
-
 # PLEASE READ UPDATED CONFIGURATION INSTRUCTIONS BEFORE USING THIS
 
 # Save this file as /bin/updatenginxblocker.sh
@@ -17,7 +14,7 @@
 # Place your own valid email address where it says "me@myemail.com"
  
 cd /etc/nginx/conf.d
-sudo wget https://raw.githubusercontent.com/mitchellkrogza/nginx-ultimate-bad-bot-blocker/master/conf.d/globalblacklist.conf -O globalblacklist.conf
+sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf -O blacklist.conf
 sudo service nginx reload | mail -s "Nginx Bad Bot Blocker Updated" me@myemail.com
 exit 0
 
