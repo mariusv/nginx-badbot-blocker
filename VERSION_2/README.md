@@ -181,6 +181,14 @@ Updating to the latest version is now as simple as:
 
 And you will be up to date with all your whitelisted domains included automatically for you now. 
 
+# AUTO UPDATING:
+
+See my latest auto updater bash script at:
+
+https://raw.githubusercontent.com/mariusv/nginx-ultimate-bad-bot-blocker/master/updatenginxblocker.sh
+
+This can now be run as a daily cron to keep you up to date without having to remember to do it yourself. I have this cron running on 3 nginx servers for the past week pulling their updates automatically from my master, works flawlessly.
+
 Relax now and sleep better at night knowing your site is telling all those baddies to go away !!!
 
 
