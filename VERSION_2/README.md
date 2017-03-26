@@ -7,7 +7,7 @@ Nginx Bad Bot Blocker
 ### Version 1 Created by: https://github.com/mariusv
 ### Version 2 Created by: https://github.com/mitchellkrogza/
 
-#[* - Configuration and Updating Instructions](#configuration-instructions-for-the-nginx-badbot-blocker)
+# [Configuration and Updating Instructions](#configuration-instructions)
 
 Over 4000 (and growing) Nginx rules to block bad bots.
 
@@ -32,12 +32,12 @@ Bots Are Liars
 Bots try to make themselves look like other software by disguising their
 useragent. Their useragents may look harmless, perfectly legitimate even.
 
-#CONFIGURATION INSTRUCTIONS FOR THE NGINX BADBOT BLOCKER:
+# CONFIGURATION INSTRUCTIONS
 ### PLEASE READ CONFIGURATION INSTRUCTIONS BELOW THOROUGHLY
 
 **New Super Easy Configuration Contributed by https://github.com/mitchellkrogza/**
 
-##1:
+## 1:
 
 **COPY THE BLACKLIST.CONF FILE FROM THE REPO**
 
@@ -47,7 +47,7 @@ Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d fold
 
 `sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf`
 
-##2: 
+## 2: 
 
 **COPY THE INCLUDE FILES FROM THE REPO**
 
@@ -66,7 +66,7 @@ Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d fold
 
 `sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/ddos.conf`
 
-##3:
+## 3:
 
 **WHITELIST ALL YOUR OWN DOMAIN NAMES AND IP ADDRESSES**
 
@@ -88,7 +88,7 @@ Use nano, vim or any other text editor to edit both whitelist-ips.conf and white
 When pulling any future updates now you can simply pull the latest globalblacklist.conf file and it will automatically include your whitelisted domains and IP addresses.
 
 
-##4:
+## 4:
 
 **INCLUDE IMPORTANT SETTINGS IN NGINX.CONF**
 
@@ -114,7 +114,7 @@ When pulling any future updates now you can simply pull the latest globalblackli
 
 The server_names_hash settings allows Nginx Server to load this very large list of domain names and IP addresses into memory.
 
-##5:
+## 5:
 
 **ADD INCLUDE FILES INTO A VHOST**
 
@@ -128,7 +128,7 @@ These includes MUST be added within a **server {}** block of a vhost otherwise y
 
 - `include /etc/nginx/bots.d/ddos.conf;`
 
-##6:
+## 6:
 
 **TESTING YOUR NGINX CONFIGURATION**
 
@@ -140,7 +140,7 @@ If you get no errors then you followed my instructions so now you can make the b
 
 The blocker is now active and working so now you can run some simple tests from another linux machine to make sure it's working.
 
-##7:
+## 7:
 
 **TESTING**
 
@@ -165,7 +165,7 @@ Should respond with: curl: (52) Empty reply from server
 
 The Nginx BadBot Blocker is now working and protecting your web sites !!!
 
-##8:
+## 8:
 
 **UPDATING THE NGINX BADBOT BLOCKER** is now easy thanks to the automatic includes for whitelisting your own domain names.
 
