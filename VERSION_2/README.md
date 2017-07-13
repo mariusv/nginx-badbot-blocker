@@ -2,14 +2,12 @@
 Nginx Bad Bot Blocker
 =====================
 
-### Version 2.2017.02
+### Version 2.2017.03
 
 ### Version 1 Created by: https://github.com/mariusv
 ### Version 2 Created by: https://github.com/mitchellkrogza/
 
 # [Configuration and Updating Instructions](#configuration-instructions)
-
-Over 4000 (and growing) Nginx rules to block bad bots.
 
 Bad bots are defined as:
 
@@ -41,11 +39,13 @@ useragent. Their useragents may look harmless, perfectly legitimate even.
 
 **COPY THE BLACKLIST.CONF FILE FROM THE REPO**
 
-Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d folder. 
+Copy the contents of **/conf.d/blacklist.conf** from the repo into your /etc/nginx/conf.d folder. 
 
-`cd /etc/nginx/conf.d`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf -O /etc/nginx/conf.d/blacklist.conf`
 
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf`
+If your Linux distribution does not have wget you can use curl as follows
+
+`curl -sL https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf -o /etc/nginx/conf.d/blacklist.conf`
 
 ## 2: 
 
@@ -55,16 +55,14 @@ Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d fold
 
 `sudo mkdir /etc/nginx/bots.d `
 
-`cd /etc/nginx/bots.d`
-
 - copy the blockbots.conf file into that folder
 
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/blockbots.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/blockbots.conf -O /etc/nginx/bots.d.d/blockbots.conf`
 
 
 - copy the ddos.conf file into the same folder
 
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/ddos.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/ddos.conf -O /etc/nginx/bots.d/ddos.conf`
 
 ## 3:
 
@@ -72,16 +70,14 @@ Copy the contents of **/conf.d/blacklist.conf** into your /etc/nginx/conf.d fold
 
 Whitelist all your own domain names and IP addresses. **Please note important changes**, this is now done using include files so that you do not have to keep reinserting your whitelisted domains and IP addresses every time you update.
 
-`cd /etc/nginx/bots.d`
-
 - copy the whitelist-ips.conf file into that folder
 
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/whitelist-domains.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/whitelist-domains.conf -O /etc/nginx/bots.d/whitelist-domains.conf`
 
 
 - copy the whitelist-domains.conf file into the same folder
 
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/whitelist-ips.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/whitelist-ips.conf -O /etc/nginx/bots.d/whitelist-ips.conf`
 
 Use nano, vim or any other text editor to edit both whitelist-ips.conf and whitelist-domains.conf to include all your own domain names and IP addresses that you want to specifically whitelist from the blocker script. 
 
@@ -171,9 +167,7 @@ The Nginx BadBot Blocker is now working and protecting your web sites !!!
 
 Updating to the latest version is now as simple as:
 
-`cd /etc/nginx/conf.d`
-
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/conf.d/blacklist.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf -O /etc/nginx/conf.d/blacklist.conf`
 
 `sudo nginx -t`
 
