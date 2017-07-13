@@ -1,4 +1,4 @@
-![Nginx Bad Bot Blocker - Block bad, possibly even malicious web crawlers (automated bots) using Nginx ](https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/nginx-bad-bot-blocker.png "Nginx Bad Bot Blocker - Block bad, possibly even malicious web crawlers (automated bots) using Nginx")
+![Nginx Bad Bot Blocker - Block bad, possibly even malicious web crawlers (automated bots) using Nginx ](https://github.com/mariusv/nginx-badbot-blocker/blob/master/VERSION_2/_assets/nginx-bad-bot-blocker.png "Nginx Bad Bot Blocker - Block bad, possibly even malicious web crawlers (automated bots) using Nginx")
 Nginx Bad Bot Blocker
 =====================
 
