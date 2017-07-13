@@ -13,8 +13,7 @@
 # Here our script runs, pulls the latest update, reloads nginx and emails you a notification
 # Place your own valid email address where it says "me@myemail.com"
  
-cd /etc/nginx/conf.d
-sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf -O blacklist.conf
+sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/conf.d/blacklist.conf -O /etc/nginx/conf.d/blacklist.conf
 sudo service nginx reload | mail -s "Nginx Bad Bot Blocker Updated" me@myemail.com
 exit 0
 
