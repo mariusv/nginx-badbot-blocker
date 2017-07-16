@@ -57,7 +57,7 @@ If your Linux distribution does not have wget you can use curl as follows
 
 - copy the blockbots.conf file into that folder
 
-`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/blockbots.conf -O /etc/nginx/bots.d.d/blockbots.conf`
+`sudo wget https://github.com/mariusv/nginx-badbot-blocker/raw/master/VERSION_2/bots.d/blockbots.conf -O /etc/nginx/bots.d/blockbots.conf`
 
 
 - copy the ddos.conf file into the same folder
