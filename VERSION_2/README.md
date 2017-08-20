@@ -245,3 +245,8 @@ Feel free to contribute bad referers from your own logs to this project by sendi
 We have added a custom Fail2Ban filter and action written by mitchellkrogza which monitors your Nginx logs for bots that generate a large number of 444 errors. This custom jail for Fail2Ban will scan logs over a 1 week period and ban the offender for 24 hours.
 It helps a great deal in keeping out some repeat offenders and preventing them from filling up your log files with 444 errors. See the Fail2Ban folder for instructions on configuring this great add on for the Nginx Bot Blocker.
 
+## Contributors
+
+- Konstantin Goretzki @konstantingoretzki https://github.com/konstantingoretzki (Improved Regex on Fail2Ban Filter)
+
+
