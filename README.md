@@ -1,7 +1,7 @@
 Nginx Bad Bot Blocker
 ===============
 
-223 (and growing) Nginx rules to block bad bots.
+**223 (and growing) Nginx rules to block bad bots.**
 
 Bad bots are defined as:
 
@@ -16,15 +16,59 @@ Bad bots are defined as:
 - Chinese search engine Baidu
 - Spamhaus IP list block
 
-Baidu
-------------
+
+## Installation
+
+If you have a bizarre or complicated setup, be sure to look everything
+over before installing. However, for anyone with a fairly straightforward Nginx installation, this should work without any issues. 
+
+**Step 1.)** Clone the Nginx Bad Bot Blocker repository into your Nginx directory.
+
+```
+cd /etc/nginx
+git clone https://github.com/mariusv/nginx-badbot-blocker.git
+```
+
+**Step 2.)** Edit `/etc/nginx/nginx.conf` and add the following at the end of the `http` block, before the closing `}`
+
+```
+##
+# Nginx Bad Bot Blocker
+##
+include nginx-badbot-blocker/blacklist.conf;
+include nginx-badbot-blocker/blockips.conf;
+```
+
+**Step 3.)** Run the following command to verify your Nginx configuration is valid. (*Note: You may need to prepend sudo to this command.*)
+
+```
+nginx -t
+```
+
+You should get an output that looks something like this:
+
+```
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+```
+
+**Step 4.)** Reload Nginx and you're all set!
+
+```
+sudo service nginx reload
+```
+
+---
+
+## Further information
+
+### Baidu
 
 Unless your website is written in Chinese, you probably don't
 get any traffic from them. They mostly just waste bandwidth and consume resources.
 
 
-Bots Are Liars
---------------
+### Bots Are Liars
 
 Bots try to make themselves look like other software by disguising their
 useragent. Their useragents may look harmless, perfectly legitimate even.
@@ -33,27 +77,9 @@ For example, "^Java" but according to
 it's actually one of the most dangerous.
 
 
-Spamhaus IP Block
-----------------
+### Spamhaus IP Block
 
 Block Spamhaus Lasso Drop Spam IP Address. (I'll keep this list updated)
 
 ***GENERATED 19/11/2015***
-
-
-Setup
------
-
-If you have a bizarre or complicated setup, be sure to look everything
-over before using it. But for anyone with something that resembles
-a standard Nginx installation, this should work without any issues as long as you include in your nginx.conf the `blacklist.conf` and `blockips.conf`.
-
-Copy both `blacklist.conf` and `blockips.conf` in your nginx directory (usually is in `/etc/nginx` but this can differ if nginx was compiled).
-Once you copied the files edit `nginx.conf` and under(usually at the end of the file) the `http` block add this lines:
-
-```bash
-## Include blacklist for bad bot and referrer blocking.
-include blacklist.conf;
-include blockips.conf;
-```
 
