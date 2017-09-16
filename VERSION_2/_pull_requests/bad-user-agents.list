@@ -25,6 +25,7 @@ BackStreet
 BackWeb
 Badass
 Bandit
+Barkrowler
 BatchFTP
 Battleztar\ Bazinga
 BBBike
@@ -80,9 +81,11 @@ Custo
 DatabaseDriverMysqli
 DataCha0s
 DBLBot
+demandbase-bot
 Demon
 Deusu
 Devil
+Digincore
 DIIbot
 Dirbuster
 Disco
@@ -92,6 +95,7 @@ DittoSpyder
 DomainAppender
 DomainCrawler
 DomainSigmaCrawler
+DomainStatsBot
 Dotbot
 Download\ Demon
 Download\ Devil
@@ -121,7 +125,6 @@ Ezooms
 FDM
 FHscan
 Fimap
-Findxbot
 Firefox/7.0
 FlashGet
 Flunky
@@ -132,6 +135,7 @@ FrontPage
 Fyrebot
 GalaxyBot
 Genieo
+GermCrawler
 Getintent
 GetRight
 GetWeb
@@ -193,6 +197,7 @@ JustView
 Jyxobot
 Kenjin\ Spider
 Keyword\ Density
+Kozmosbot
 Lanshanbot
 Larbin
 LeechFTP
@@ -231,6 +236,7 @@ Masscan
 Mass\ Downloader
 Mata\ Hari
 Meanpathbot
+mediawords
 MegaIndex.ru
 Metauri
 MFC_Tear_Sample
@@ -262,6 +268,7 @@ NetMechanic
 NetSpider
 Nettrack
 Net\ Vampire
+Netvibes
 NetZIP
 NextGenSearchBot
 Nibbler
@@ -391,6 +398,7 @@ Surfbot
 SurveyBot
 Suzuran
 Swiftbot
+sysscan
 Szukacz
 T0PHackTeam
 T8Abot
@@ -491,6 +499,7 @@ WWW-Collector-E
 WWW-Mechanize
 WWW::Mechanize
 WWWOFFLE
+x09Mozilla
 x22Mozilla
 Xaldon_WebSpider
 Xaldon\ WebSpider
