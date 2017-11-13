@@ -4,6 +4,7 @@ Abonti
 Aboundex
 Acunetix
 ADmantX
+AfD-Verbotsverfahren
 AhrefsBot
 AIBOT
 AiHitBot
@@ -43,7 +44,6 @@ Boardreader
 Bolt
 BotALot
 Brandprotect
-BrandProtect
 Brandwatch
 Bubing
 Buddy
@@ -63,6 +63,7 @@ ChinaClaw
 Chlooe
 Claritybot
 Cliqzbot
+Cloud\ mapping
 Cogentbot
 cognitiveseo
 Collector
@@ -73,7 +74,6 @@ Copyscape
 Cosmos
 Craftbot
 CrazyWebCrawler
-CRAZYWEBCRAWLER
 Crescent
 CSHttp
 Curious
@@ -97,8 +97,6 @@ DomainCrawler
 DomainSigmaCrawler
 DomainStatsBot
 Dotbot
-Download\ Demon
-Download\ Devil
 Download\ Wonder
 Dragonfly
 Drip
@@ -109,11 +107,10 @@ eCatch
 ECCP/1.0
 Ecxi
 EirGrabber
-EMail\ Collector
-EMail\ Extractor
 EMail\ Siphon
 EMail\ Wolf
 EroCrawler
+evc-batch
 Evil
 Exabot
 Express\ WebPictures
@@ -142,7 +139,6 @@ GetWeb
 Gigablast
 Gigabot
 G-i-g-a-b-o-t
-G\-i\-g\-a\-b\-o\-t
 Go-Ahead-Got-It
 Gotit
 GoZilla
@@ -171,7 +167,6 @@ IDBot
 Id-search
 IlseBot
 Image\ Fetch
-Image\ Stripper
 Image\ Sucker
 Indy\ Library
 InfoNaviRobot
@@ -248,6 +243,7 @@ Mister\ PiX
 MJ12bot
 Mojeek
 Morfeus\ Fucking\ Scanner
+Mozilla/4
 MSFrontPage
 MSIE\ 6.0
 MSIECrawler
@@ -292,7 +288,6 @@ OutfoxBot
 PageAnalyzer
 Page\ Analyzer
 PageGrabber
-Page\ Grabber
 page\ scorer
 PageScorer
 Panscient
@@ -315,7 +310,6 @@ POE-Component-Client-HTTP
 Probethenet
 ProPowerBot
 ProWebWalker
-Proximic
 Psbot
 Pump
 PyCurl
@@ -344,22 +338,22 @@ ScanAlert
 Scanbot
 Scrapy
 Screaming
-Screaming\ Frog\ SEO\ Spider
 ScreenerBot
 Searchestate
 SearchmetricsBot
 Semrush
 SemrushBot
 SEOkicks
-SEOkicks-Robot
 SEOlyticsCrawler
 Seomoz
 SEOprofiler
 seoscanners
 SEOstats
+sexsearcher
+Seznam
+SeznamBot
 Siphon
 SISTRIX
-SISTRIX\ Crawler
 Sitebeam
 SiteExplorer
 Siteimprove
@@ -414,12 +408,14 @@ TightTwatBot
 Titan
 Toata
 Toweyabot
+Trendiction
 Trendictionbot
+trendiction.com
+trendiction.de
 True_Robot
 Turingos
+Turnitin
 TurnitinBot
-Turnitin\ Bot
-Turnitin\ Robot
 TwengaBot
 Twice
 Typhoeus
@@ -444,13 +440,10 @@ Webalta
 WebAuto
 Web\ Auto
 WebBandit
-Web\ Bandit
 WebCollage
 Web\ Collage
 WebCopier
-Web\ Copier
 WEBDAV
-WEBDAV\ Client
 WebEnhancer
 Web\ Enhancer
 WebFetch
@@ -459,33 +452,29 @@ WebFuck
 Web\ Fuck
 WebGo\ IS
 WebImageCollector
-Web\ Image\ Collector
 WebLeacher
 WebmasterWorldForumBot
 webmeup-crawler
 WebPix
 Web\ Pix
 WebReaper
-Web\ Reaper
 WebSauger
 Web\ Sauger
 Webshag
 WebsiteExtractor
-Website\ Extractor
 WebsiteQuester
 Website\ Quester
 Webster
 WebStripper
-Web\ Stripper
 WebSucker
 Web\ Sucker
 WebWhacker
-Web\ Whacker
 WebZIP
 WeSEE
 Whack
 Whacker
 Whatweb
+Who.is\ Bot
 Widow
 WinHTTrack
 WiseGuys\ Robot
@@ -508,7 +497,7 @@ YoudaoBot
 Zade
 Zermelo
 Zeus
-Zgrab
+zgrab
 Zitebot
 ZmEu
 ZumBot
