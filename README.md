@@ -81,5 +81,5 @@ it's actually one of the most dangerous.
 
 Block Spamhaus Lasso Drop Spam IP Address. (I'll keep this list updated)
 
-***GENERATED 19/11/2015***
+***UPDATED 16/01/2018***
 
