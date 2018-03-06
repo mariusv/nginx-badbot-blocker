@@ -228,7 +228,7 @@ lwp-trivial
 Magnet
 Mag-Net
 magpie-crawler
-Mail.ru
+Mail.RU_Bot
 Majestic12
 MarkMonitor
 MarkWatch
@@ -252,6 +252,7 @@ MSFrontPage
 MSIECrawler
 Msrabot
 MS\ Web\ Services\ Client\ Protocol
+muhstik-scan
 Musobot
 Name\ Intelligence
 Nameprotect
@@ -318,7 +319,6 @@ Psbot
 Pump
 PyCurl
 QueryN\ Metasearch
-Qwantify
 RankActive
 RankActiveLinkBot
 RankFlex
