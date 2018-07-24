@@ -1,4 +1,6 @@
 360Spider
+404checker
+404enemy
 80legs
 Abonti
 Aboundex
@@ -12,6 +14,7 @@ Aipbot
 Alexibot
 Alligator
 AllSubmitter
+AlphaBot
 Anarchie
 Apexoo
 ASPSeek
@@ -30,6 +33,7 @@ Barkrowler
 BatchFTP
 Battleztar\ Bazinga
 BBBike
+BDCbot
 BDFetch
 BetaBot
 Bigfoot
@@ -74,6 +78,8 @@ CopyRightCheck
 Copyscape
 Cosmos
 Craftbot
+crawler4j
+crawler.feedback
 CrazyWebCrawler
 Crescent
 CSHttp
@@ -94,6 +100,7 @@ Disco
 Discobot
 Discoverybot
 DittoSpyder
+DnyzBot
 DomainAppender
 DomainCrawler
 DomainSigmaCrawler
@@ -130,7 +137,6 @@ Firefox/7.0
 FlashGet
 Flunky
 Foobot
-fq
 Freeuploader
 FrontPage
 Fyrebot
@@ -154,6 +160,7 @@ GrapeFX
 GrapeshotCrawler
 GridBot
 GT::WWW
+Haansoft
 HaosouSpider
 Harvest
 Havij
@@ -172,6 +179,7 @@ Id-search
 IlseBot
 Image\ Fetch
 Image\ Sucker
+IndeedBot
 Indy\ Library
 InfoNaviRobot
 InfoTekies
@@ -185,6 +193,7 @@ ips-agent
 Iria
 IRLbot
 Iskanie
+IstellaBot
 JamesBOT
 Jbrofuzz
 JennyBot
@@ -235,6 +244,7 @@ MarkWatch
 Masscan
 Mass\ Downloader
 Mata\ Hari
+MauiBot
 Meanpathbot
 mediawords
 MegaIndex.ru
@@ -248,6 +258,7 @@ Mister\ PiX
 MJ12bot
 Mojeek
 Morfeus\ Fucking\ Scanner
+Mr.4x3
 MSFrontPage
 MSIECrawler
 Msrabot
@@ -287,8 +298,10 @@ Offline\ Navigator
 Openfind
 OpenLinkProfiler
 Openvas
+OpenVAS
 OrangeBot
 OrangeSpider
+OutclicksBot
 OutfoxBot
 PageAnalyzer
 Page\ Analyzer
@@ -317,8 +330,10 @@ ProPowerBot
 ProWebWalker
 Psbot
 Pump
+PxBroker
 PyCurl
 QueryN\ Metasearch
+Quick-Crawler
 RankActive
 RankActiveLinkBot
 RankFlex
@@ -340,6 +355,7 @@ SalesIntelligent
 SBIder
 ScanAlert
 Scanbot
+scan.lol
 Scrapy
 Screaming
 ScreenerBot
@@ -356,6 +372,7 @@ SEOstats
 sexsearcher
 Seznam
 SeznamBot
+Shodan
 Siphon
 SISTRIX
 Sitebeam
@@ -498,8 +515,11 @@ x22Mozilla
 Xaldon_WebSpider
 Xaldon\ WebSpider
 Xenu
+xpymep1.exe
 YoudaoBot
 Zade
+Zauba
+zauba.io
 Zermelo
 Zeus
 zgrab
