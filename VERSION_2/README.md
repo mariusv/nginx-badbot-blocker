@@ -3,8 +3,8 @@ Nginx Bad Bot Blocker
 =====================
 
 _______________
-#### Version: V2.2018.03.06
-#### Bad Referrer Count: 6103
+#### Version: V2.2018.07.24
+#### Bad Referrer Count: 6193
 #### Bad Bot Count: 509
 ____________________
 
