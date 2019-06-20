@@ -4,6 +4,7 @@
 80legs
 Abonti
 Aboundex
+Aboundexbot
 Acunetix
 ADmantX
 AfD-Verbotsverfahren
@@ -64,6 +65,7 @@ CCBot
 Cegbfeieh
 CheeseBot
 CherryPicker
+CheTeam
 ChinaClaw
 Chlooe
 Claritybot
@@ -84,6 +86,7 @@ crawler.feedback
 crawl.sogou.com
 CrazyWebCrawler
 Crescent
+CrunchBot
 CSHttp
 Curious
 Custo
@@ -101,6 +104,7 @@ Dirbuster
 Disco
 Discobot
 Discoverybot
+Dispatch
 DittoSpyder
 DnyzBot
 DomainAppender
@@ -111,6 +115,7 @@ Dotbot
 Download\ Wonder
 Dragonfly
 Drip
+DSearch
 DTS\ Agent
 EasyDL
 Ebingbong
@@ -131,6 +136,7 @@ ExtractorPro
 Extreme\ Picture\ Finder
 EyeNetIE
 Ezooms
+facebookscraper
 FDM
 FemtosearchBot
 FHscan
@@ -201,6 +207,7 @@ JamesBOT
 Jbrofuzz
 JennyBot
 JetCar
+Jetty
 JikeSpider
 JOC\ Web\ Spider
 Joomla
@@ -230,6 +237,7 @@ LinqiaMetadataDownloaderBot
 LinqiaRSSBot
 LinqiaScrapeBot
 Lipperhey
+Lipperhey\ Spider
 Litemage_walker
 Lmspider
 LNSpiderguy
@@ -242,13 +250,18 @@ Mag-Net
 magpie-crawler
 Mail.RU_Bot
 Majestic12
+Majestic-SEO
+Majestic\ SEO
 MarkMonitor
 MarkWatch
 Masscan
 Mass\ Downloader
 Mata\ Hari
 MauiBot
+meanpathbot
 Meanpathbot
+MeanPath\ Bot
+Mediatoolkitbot
 mediawords
 MegaIndex.ru
 Metauri
@@ -290,6 +303,7 @@ NICErsPRO
 Niki-bot
 Nikto
 NimbleCrawler
+Nimbostratus
 Ninja
 Nmap
 NPbot
@@ -298,6 +312,7 @@ oBot
 Octopus
 Offline\ Explorer
 Offline\ Navigator
+OnCrawl
 Openfind
 OpenLinkProfiler
 Openvas
@@ -311,6 +326,7 @@ Page\ Analyzer
 PageGrabber
 page\ scorer
 PageScorer
+Pandalytics
 Panscient
 Papa\ Foto
 Pavuk
@@ -354,11 +370,13 @@ RepoMonkey
 Ripper
 RocketCrawler
 Rogerbot
+s1z.ru
 SalesIntelligent
 SBIder
 ScanAlert
 Scanbot
 scan.lol
+ScoutJet
 Scrapy
 Screaming
 ScreenerBot
@@ -367,14 +385,15 @@ SearchmetricsBot
 Semrush
 SemrushBot
 SEOkicks
+SEOkicks-Robot
 SEOlyticsCrawler
 Seomoz
 SEOprofiler
 seoscanners
+SeoSiteCheckup
 SEOstats
+serpstatbot
 sexsearcher
-Seznam
-SeznamBot
 Shodan
 Siphon
 SISTRIX
@@ -394,6 +413,7 @@ Snake
 Snapbot
 Snoopy
 SocialRankIOBot
+Sociscraper
 sogouspider
 Sogou\ web\ spider
 Sosospider
@@ -402,9 +422,11 @@ SpaceBison
 Spammen
 SpankBot
 Spanner
+sp_auditbot
 Spbot
 Spinn3r
 SputnikBot
+spyfu
 Sqlmap
 Sqlworm
 Sqworm
@@ -447,6 +469,7 @@ TwengaBot
 Twice
 Typhoeus
 UnisterBot
+Upflow
 URLy.Warning
 URLy\ Warning
 Vacuum
